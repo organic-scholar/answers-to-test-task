@@ -75,12 +75,14 @@ Should produce:
 [1] -> [1,2] -> [1,2,3] -> [1,2,3,4]
 
 Not sure how to do it, but I can by doing some experimentation.
-Scan or MergeScan operator can be useful.
+zip(input, source.pipe(take(n)));
+n needed to incremented as index of input
 
 
 #### Explain which of the Twilio Api’s you have used.  Also explain how and in what scenarios you have used them.
 
-Haven’t used it production but I know it can be used to send and receive sms and phone calls.
+Haven’t used it in production but I know it can be used to send and receive sms and phone calls. As an alternative I have used AWS
+SNS platform to send SMS based notification to application users. In my last project there is a use case where I have to inform clinical center about patient elevated blood pressure by all possible means of communication that also involves SMS based alerts.
 
 
 

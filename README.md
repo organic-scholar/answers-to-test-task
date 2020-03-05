@@ -74,10 +74,12 @@ E.g.
 Should produce:
 [1] -> [1,2] -> [1,2,3] -> [1,2,3,4]
 
-Not sure how to do it, but I can by doing some experimentation.
-zip(input, source.pipe(take(n)));
-n needed to incremented as index of input
-
+of(1,2,3,4,5,6).pipe(scan((acc, item)=>{
+    return [...acc, item]
+}, [] as number[])).subscribe((out)=>
+{
+    console.log(out);
+})
 
 #### Explain which of the Twilio Api’s you have used.  Also explain how and in what scenarios you have used them.
 
